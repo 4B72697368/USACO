@@ -1,0 +1,42 @@
+Problem 1 (Astral Superposition):
+
+Define a counter for minimum number of stars
+Define a N x N 2D Boolean array representing the stars that were originally there
+
+For every (r, c) point, looping left to right, then moving down one row:
+  If B:
+    Add
+    If array[r-a][c-b] is false:
+      Return -1
+  If G:
+    If (r+a, c+b) is B or array[r-a][c-b] is false:
+      Add
+
+
+
+Problem 2 (It's Mooin' Time II):
+
+Define a 10-long array, representing how many times each digit has been a secondary digit to a moo.
+Cycle through the array and see every number which has the same number AFTER it.
+Then, see how many unique numbers that are not that number are behind it.
+If this number is higher than the current record for that digit stored in the array, set that record to this number.
+
+Output the combination of all digit's records.
+
+Example:
+123444
+1 has no 1 after it, skip
+2 has no 2 after it, skip
+3 has no 3 after it, skip
+4 has a 4 after it, and there are 3 unique numbers that are not 4 behind it, set 4's record to 3
+4 has a 4 after it, and there are 3 unique numbers that are not 4 behind it, 4's current record is not < 3, skip
+4 has no 4 after it, skip
+
+Output combination of all records, 3
+
+
+
+Problem 3 (Cow Checkups):
+
+Define a N x N 2D int array representing the amount of checkups for an operation that swaps from X to Y.
+Cycle through every number and see how much it needs to move to get to its place
